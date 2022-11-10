@@ -38,5 +38,14 @@ export class AppComponent {
     EditEmployee(){
       this.router.navigate(["edit_employee"]);
     }
+    ListDepartmentsEmployee(){
+      this.router.navigate(["list_depar_employee"]);
+    }
+    AddDepartmentsEmployee(){
+      this.router.navigate(["add_depar_employee"]);
+    }
+    EditDepartmentsEmployee(){
+      this.router.navigate(["edit_depar_employee"]);
+    }
 
   }

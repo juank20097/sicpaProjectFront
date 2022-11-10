@@ -32,4 +32,9 @@ export class EmployeelistComponent implements OnInit {
     })
   }
 
+  AddDepartmentsEmployee(employe:Employee):void{
+    localStorage.setItem("id",employe.id.toString());
+    this.router.navigate(["add_depar_employee"]);
+  }
+
 }
