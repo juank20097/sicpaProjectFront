@@ -11,6 +11,7 @@
             <th>Name</th>
             <th>Phone</th>
             <th>Description</th>
+            <th>Employees</th>
           </tr>
         </thead>
         <tbody>
@@ -19,6 +20,7 @@
             <td>{{depar.name}}</td>
             <td>{{depar.phone}}</td>
             <td>{{depar.description}}</td>
+            <td> <td><button (click)="View(depar)" class="btn btn-primary">View Employees</button></td>
             <td>
               <button (click)="Edit(depar)" class="btn btn-warning">Edit</button>
               <button

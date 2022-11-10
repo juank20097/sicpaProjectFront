@@ -18,9 +18,9 @@ import { EnterpriselistComponent } from './components/Enterprise/enterpriselist/
 import { EnterpriseaddComponent } from './components/Enterprise/enterpriseadd/enterpriseadd.component';
 import { EnterpriseeditComponent } from './components/Enterprise/enterpriseedit/enterpriseedit.component';
 import { DeparemployeeaddComponent } from './components/DepartmentsEmployee/deparemployeeadd/deparemployeeadd.component';
-import { DeparemployeeeditComponent } from './components/DepartmentsEmployee/deparemployeeedit/deparemployeeedit.component';
-import { DeparemployeelistComponent } from './components/DepartmentsEmployee/deparemployeelist/deparemployeelist.component';
 import { DepartmentsEmployeeService } from './services/serviceDepartmentsEmployee/departments-employee.service';
+import { DeparemployeelistdepartmentComponent } from './components/DepartmentsEmployee/deparemployeelistdepartment/deparemployeelistdepartment.component';
+import { DeparemployeelistemployeeComponent } from './components/DepartmentsEmployee/deparemployeelistemployee/deparemployeelistemployee.component';
 
 @NgModule({
   declarations: [
@@ -35,8 +35,8 @@ import { DepartmentsEmployeeService } from './services/serviceDepartmentsEmploye
     EnterpriseaddComponent,
     EnterpriseeditComponent,
     DeparemployeeaddComponent,
-    DeparemployeeeditComponent,
-    DeparemployeelistComponent,
+    DeparemployeelistdepartmentComponent,
+    DeparemployeelistemployeeComponent,
   ],
   imports: [
     BrowserModule,

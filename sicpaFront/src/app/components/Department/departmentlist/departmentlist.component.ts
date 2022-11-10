@@ -37,4 +37,9 @@ export class DepartmentlistComponent implements OnInit {
     this.router.navigate(["add_depar_employee"]);
   }
 
+  View(depar:Department):void{
+    localStorage.setItem("id",depar.id.toString());
+    this.router.navigate(["list_depar_employee_depar"]);
+  }
+
 }

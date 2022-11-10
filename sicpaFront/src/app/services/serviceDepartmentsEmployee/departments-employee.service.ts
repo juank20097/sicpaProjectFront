@@ -38,4 +38,12 @@ export class DepartmentsEmployeeService {
   updateDepartmentEmployee(department:DepartmentsEmployee): Observable<any>{
     return this.http.put<DepartmentsEmployee>(this.Url+"/"+department.id,department);
   }
+
+  getDepartmentEmployeeByDepartment(id:Number): Observable<any>{
+    return this.http.get<DepartmentsEmployee>(this.Url+"/department/"+id);
+  }
+
+  getDepartmentEmployeeByEmployee(id:Number): Observable<any>{
+    return this.http.get<DepartmentsEmployee>(this.Url+"/employee/"+id);
+  }
 }

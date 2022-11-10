@@ -26,7 +26,6 @@ export class EnterpriselistComponent implements OnInit {
 
   Change(enterprise:Enterprise){
     localStorage.setItem("id",enterprise.id.toString());
-    console.log(enterprise);
     enterprise.status = false;
     this.service.updateEnterprise(enterprise).subscribe(data=>{
       this.enterprises=this.enterprises.filter(p=>p!==enterprise);

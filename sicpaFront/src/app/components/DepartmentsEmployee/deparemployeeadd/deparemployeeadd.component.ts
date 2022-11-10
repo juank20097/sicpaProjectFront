@@ -20,8 +20,6 @@ export class DeparemployeeaddComponent implements OnInit , OnDestroy {
   employees!:Employee[];
   deparEmployees!: DepartmentsEmployee[];
   suscription!:  Subscription;
-  idDepertment!: string;
-  idEmployee!: String;
   constructor(private router:Router, private serviceEmployee:EmployeeService, private serviceDepartment:DepartmentService, private serviceDeparEmployee:DepartmentsEmployeeService) { }
 
   ngOnInit(): void {

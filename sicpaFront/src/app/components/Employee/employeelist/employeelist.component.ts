@@ -37,4 +37,9 @@ export class EmployeelistComponent implements OnInit {
     this.router.navigate(["add_depar_employee"]);
   }
 
+  View(employe:Employee):void{
+    localStorage.setItem("id",employe.id.toString());
+    this.router.navigate(["list_depar_employee_emplo"]);
+  }
+
 }
