@@ -22,11 +22,14 @@ export class DepartmentlistComponent implements OnInit {
 
   Edit(department:Department):void{
     localStorage.setItem("id",department.id.toString());
-    this.router.navigate(["edit_enterprise"]);
+    this.router.navigate(["edit_department"]);
   }
 
-  Disable(department:Department){
-
+  Change(department:Department){
+    department.status = false;
+    this.service.updateDepartment(department).subscribe(data=>{
+      this.departments=this.departments.filter(p=>p!==department);
+    })
   }
 
 }

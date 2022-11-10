@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Department } from 'src/app/models/department';
+import { Enterprise } from 'src/app/models/enterprise';
 import { DepartmentService } from 'src/app/services/serviceDepartment/department.service';
 
 
@@ -12,10 +13,14 @@ import { DepartmentService } from 'src/app/services/serviceDepartment/department
 export class DepartmenteditComponent implements OnInit {
 
   department:Department=new Department();
+  enterprises!:Enterprise[];
   constructor(private router:Router, private service:DepartmentService) { }
 
   ngOnInit(): void {
     this.Edit();
+    this.service.getEnterprise().subscribe(data=>{
+      this.enterprises=data;
+    })
   }
 
   Edit(){
@@ -38,6 +43,11 @@ export class DepartmenteditComponent implements OnInit {
 
   Cancel(){
     this.router.navigate(["list_department"]);
+  }
+
+  CompareEnterprise(e1: Enterprise,e2: Enterprise): boolean{
+    if (e1 === undefined && e2 === undefined) return true;
+    return e1 === null || e2 === null || e1 === undefined || e2 === undefined ? false: e1.id == e2.id;
   }
 
 }

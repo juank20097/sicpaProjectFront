@@ -8,7 +8,10 @@
       <form action="">
         <div class="form-group">
           <label for="">Enterprise:</label>
-          <input [(ngModel)]="department.enterprise.name" name="name" type="text" class="form-control">
+          <select [compareWith]="CompareEnterprise" class="form-select" [(ngModel)]="department.enterprise" name="selected">
+            <option [ngValue]="undefined">---Select Option Please---</option>
+            <option *ngFor="let e of enterprises" [ngValue]="e" selected>{{e.name}}</option>
+          </select>
         </div>
         <div class="form-group">
           <label for="">Name:</label>

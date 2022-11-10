@@ -25,8 +25,11 @@ export class EmployeelistComponent implements OnInit {
     this.router.navigate(["edit_employee"]);
   }
 
-  Disable(employee:Employee){
-
+  Change(employee:Employee){
+    employee.status = false;
+    this.service.updateEmployee(employee).subscribe(data=>{
+      this.employees=this.employees.filter(p=>p!==employee);
+    })
   }
 
 }
