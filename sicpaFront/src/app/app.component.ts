@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { AddComponent } from './Enterprise/add/add.component';
-import { EditComponent } from './Enterprise/edit/edit.component';
-import { ListComponent } from './Enterprise/list/list.component';
 
 @Component({
   selector: 'app-root',
@@ -14,14 +11,32 @@ export class AppComponent {
 
   constructor(private router:Router){}
 
-    List(){
-      this.router.navigate(["list"]);
+    ListEnterprise(){
+      this.router.navigate(["list_enterprise"]);
     }
-    Add(){
-      this.router.navigate(["add"]);
+    AddEnterprise(){
+      this.router.navigate(["add_enterprise"]);
     }
-    Edit(){
-      this.router.navigate(["edit"]);
+    EditEnterprise(){
+      this.router.navigate(["edit_enterprise"]);
+    }
+    ListDepartment(){
+      this.router.navigate(["list_department"]);
+    }
+    AddDepartment(){
+      this.router.navigate(["add_department"]);
+    }
+    EditDepartment(){
+      this.router.navigate(["edit_department"]);
+    }
+    ListEmployee(){
+      this.router.navigate(["list_employee"]);
+    }
+    AddEmployee(){
+      this.router.navigate(["add_employee"]);
+    }
+    EditEmployee(){
+      this.router.navigate(["edit_employee"]);
     }
 
   }

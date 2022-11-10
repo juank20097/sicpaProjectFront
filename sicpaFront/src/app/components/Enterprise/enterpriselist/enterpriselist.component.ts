@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Enterprise } from 'src/app/models/enterprise';
-import { ServiceService } from 'src/app/Service/service.service';
+import { EnterpriseService } from 'src/app/services/serviceEnterprise/enterprise.service';
 
 @Component({
-  selector: 'app-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css']
+  selector: 'app-enterpriselist',
+  templateUrl: './enterpriselist.component.html',
+  styleUrls: ['./enterpriselist.component.css']
 })
-export class ListComponent implements OnInit {
+export class EnterpriselistComponent implements OnInit {
 
   enterprises!:Enterprise[];
-  constructor(private service:ServiceService, private router:Router ) { }
+  constructor(private service:EnterpriseService, private router:Router ) { }
 
   ngOnInit(): void {
     this.service.getEnterprise().subscribe(data=>{
@@ -21,10 +21,11 @@ export class ListComponent implements OnInit {
 
   Edit(enterprise:Enterprise):void{
     localStorage.setItem("id",enterprise.id.toString());
-    this.router.navigate(["edit"]);
+    this.router.navigate(["edit_enterprise"]);
   }
 
   Disable(enterprise:Enterprise){
 
   }
+
 }
