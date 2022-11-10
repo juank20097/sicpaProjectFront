@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Department } from 'src/app/models/department';
+import { Enterprise } from 'src/app/models/enterprise';
 import { DepartmentService } from 'src/app/services/serviceDepartment/department.service';
 
 @Component({
@@ -11,9 +12,13 @@ import { DepartmentService } from 'src/app/services/serviceDepartment/department
 export class DepartmentaddComponent implements OnInit {
 
   department=new Department();
+  enterprises!:Enterprise[];
   constructor(private router:Router, private service:DepartmentService) { }
 
   ngOnInit(): void {
+    this.service.getEnterprise().subscribe(data=>{
+      this.enterprises=data;
+    })
   }
 
   Save(){
