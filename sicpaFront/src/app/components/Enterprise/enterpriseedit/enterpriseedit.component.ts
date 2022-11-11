@@ -30,7 +30,7 @@ export class EnterpriseeditComponent implements OnInit {
     this.enterprise.modifiedDate = new Date();
     this.service.updateEnterprise(enterprise).subscribe(data=>{
       this.enterprise=data;
-      alert("Update Data Successfull...!!!");
+      alert("Update Data Successfull");
       this.router.navigate(["list_enterprise"]);
     })
   }

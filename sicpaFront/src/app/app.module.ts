@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule} from '@angular/forms';
 import { EnterpriseService } from './services/serviceEnterprise/enterprise.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DepartmentService } from './services/serviceDepartment/department.service';
@@ -42,6 +42,7 @@ import { DeparemployeelistemployeeComponent } from './components/DepartmentsEmpl
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [EnterpriseService, DepartmentService, EmployeeService, DepartmentsEmployeeService],
