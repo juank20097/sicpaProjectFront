@@ -1,4 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 
 import { EmployeeeditComponent } from './employeeedit.component';
 
@@ -8,7 +10,9 @@ describe('EmployeeeditComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EmployeeeditComponent ]
+      declarations: [ EmployeeeditComponent ],
+      providers: [ FormsModule],
+      imports: [HttpClientModule],
     })
     .compileComponents();
 
@@ -17,7 +21,7 @@ describe('EmployeeeditComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create EmployeeeditComponent', () => {
     expect(component).toBeTruthy();
   });
 });

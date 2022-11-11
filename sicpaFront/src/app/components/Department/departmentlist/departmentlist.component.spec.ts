@@ -1,4 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 
 import { DepartmentlistComponent } from './departmentlist.component';
 
@@ -8,7 +10,9 @@ describe('DepartmentlistComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DepartmentlistComponent ]
+      declarations: [ DepartmentlistComponent ],
+      providers: [ FormsModule],
+      imports: [HttpClientModule],
     })
     .compileComponents();
 
@@ -17,7 +21,7 @@ describe('DepartmentlistComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create DepartmentlistComponent', () => {
     expect(component).toBeTruthy();
   });
 });
