@@ -34,9 +34,10 @@ export class DepartmenteditComponent implements OnInit {
 
   Update(department:Department){
     this.department.modifiedDate = new Date();
+    this.department.modifiedBy = "admin";
     this.service.updateDepartment(department).subscribe(data=>{
       this.department=data;
-      alert("Update Data Successfull...!!!");
+      alert("Update Data Successfull");
       this.router.navigate(["list_department"]);
     })
   }

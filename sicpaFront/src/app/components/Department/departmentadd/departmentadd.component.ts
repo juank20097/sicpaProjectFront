@@ -24,8 +24,9 @@ export class DepartmentaddComponent implements OnInit {
   Save(){
     this.department.createdDate=new Date();
     this.department.status=true;
+    this.department.createdBy="admin";
     this.service.createDepartment(this.department).subscribe(data=>{
-      alert("Save data successfull!!!");
+      alert("Save data successfull");
       this.router.navigate(["list_department"]);
     })
   }

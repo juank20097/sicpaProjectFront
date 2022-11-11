@@ -29,9 +29,10 @@ export class EmployeeeditComponent implements OnInit {
 
   Update(employee:Employee){
     this.employee.modifiedDate = new Date();
+    this.employee.modifiedBy="admin";
     this.service.updateEmployee(employee).subscribe(data=>{
       this.employee=data;
-      alert("Update Data Successfull...!!!");
+      alert("Update Data Successfull");
       this.router.navigate(["list_employee"]);
     })
   }

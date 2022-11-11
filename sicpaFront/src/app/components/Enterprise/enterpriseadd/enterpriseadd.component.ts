@@ -31,6 +31,7 @@ export class EnterpriseaddComponent implements OnInit {
     this.enterprise.address = this.enterForm.value.address;
     this.enterprise.createdDate=new Date();
     this.enterprise.status=true;
+    this.enterprise.createdBy="admin";
     this.service.createEnterprise(this.enterprise).subscribe(data=>{
       alert("Save data successfull");
       this.router.navigate(["list_enterprise"]);

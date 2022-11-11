@@ -28,6 +28,7 @@ export class EnterpriseeditComponent implements OnInit {
 
   Update(enterprise:Enterprise){
     this.enterprise.modifiedDate = new Date();
+    this.enterprise.modifiedBy="admin";
     this.service.updateEnterprise(enterprise).subscribe(data=>{
       this.enterprise=data;
       alert("Update Data Successfull");

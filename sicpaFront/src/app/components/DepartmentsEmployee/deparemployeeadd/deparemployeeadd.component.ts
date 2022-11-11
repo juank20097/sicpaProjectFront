@@ -48,8 +48,9 @@ export class DeparemployeeaddComponent implements OnInit , OnDestroy {
   Save(){
     this.deparEmployee.createdDate=new Date();
     this.deparEmployee.status=true;
+    this.deparEmployee.createdBy="admin";
     this.serviceDeparEmployee.createDepartmentEmployee(this.deparEmployee).subscribe(data=>{
-      alert("Save data successfull!!!");
+      alert("Save data successfull");
     this.deparEmployees=this.deparEmployees.filter(p=>p!==null);
     })
   }

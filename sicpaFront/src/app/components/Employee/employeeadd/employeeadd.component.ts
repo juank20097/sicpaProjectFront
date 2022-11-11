@@ -20,8 +20,9 @@ export class EmployeeaddComponent implements OnInit {
   Save(){
     this.employee.createdDate=new Date();
     this.employee.status=true;
+    this.employee.createdBy="admin";
     this.service.createEmployee(this.employee).subscribe(data=>{
-      alert("Save data successfull!!!");
+      alert("Save data successfull");
       this.router.navigate(["list_employee"]);
     })
   }
