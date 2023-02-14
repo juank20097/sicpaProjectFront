@@ -19,7 +19,7 @@ export class EmployeeService {
     return this.http.post<Employee>(this.Url,employee);
   }
 
-  getEmployeeId(id:number){
+  getEmployeeId(id:string){
     return this.http.get<Employee>(this.Url+"/"+id);
   }
 

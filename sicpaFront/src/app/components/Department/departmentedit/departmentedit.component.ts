@@ -26,7 +26,7 @@ export class DepartmenteditComponent implements OnInit {
   Edit(){
     let id= localStorage.getItem("id");
     if (id!= null){
-      this.service.getDepartmentId(+id).subscribe(data=>{
+      this.service.getDepartmentId(id).subscribe(data=>{
         this.department=data;
       })
     }

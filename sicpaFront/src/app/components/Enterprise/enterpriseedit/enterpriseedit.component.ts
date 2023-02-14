@@ -20,7 +20,7 @@ export class EnterpriseeditComponent implements OnInit {
   Edit(){
     let id= localStorage.getItem("id");
     if (id!= null){
-      this.service.getEnterpriseId(+id).subscribe(data=>{
+      this.service.getEnterpriseId(id).subscribe(data=>{
         this.enterprise=data;
       })
     }

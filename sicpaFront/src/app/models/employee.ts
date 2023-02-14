@@ -1,5 +1,5 @@
 export class Employee{
-  id!:Number;
+  id!:String;
   age!:Number;
   createdBy!:String;
   createdDate!:Date;

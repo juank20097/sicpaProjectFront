@@ -1,5 +1,5 @@
 export class Enterprise{
-  id!:Number;
+  id!:String;
   address!:String;
   createdBy!:String;
   createdDate!:Date;

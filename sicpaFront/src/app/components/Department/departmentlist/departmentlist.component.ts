@@ -33,12 +33,12 @@ export class DepartmentlistComponent implements OnInit {
   }
 
   AddDepartmentsEmployee(depar:Department):void{
-    localStorage.setItem("id",depar.id.toString());
+    localStorage.setItem("id_department",depar.id.toString());
     this.router.navigate(["add_depar_employee"]);
   }
 
   View(depar:Department):void{
-    localStorage.setItem("id",depar.id.toString());
+    localStorage.setItem("id_department",depar.id.toString());
     this.router.navigate(["list_depar_employee_depar"]);
   }
 

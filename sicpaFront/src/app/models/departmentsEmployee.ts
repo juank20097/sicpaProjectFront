@@ -2,7 +2,7 @@ import { Department } from "./department";
 import { Employee } from "./employee";
 
 export class DepartmentsEmployee{
-  id!:Number;
+  id!:String;
   createdBy!:String;
   createdDate!:Date;
   modifiedBy!:String;

@@ -1,7 +1,7 @@
 import { Enterprise } from "./enterprise";
 
 export class Department{
-  id!:Number;
+  id!:String;
   description!:String;
   createdBy!:String;
   createdDate!:Date;

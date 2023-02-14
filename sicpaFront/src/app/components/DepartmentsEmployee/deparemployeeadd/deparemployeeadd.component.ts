@@ -56,18 +56,18 @@ export class DeparemployeeaddComponent implements OnInit , OnDestroy {
   }
 
   AddEmployee(){
-    let id= localStorage.getItem("id");
+    let id= localStorage.getItem("id_employee");
     if (id!= null){
-      this.serviceEmployee.getEmployeeId(+id).subscribe(data=>{
+      this.serviceEmployee.getEmployeeId(id).subscribe(data=>{
         this.deparEmployee.employee=data;
       })
     }
   }
 
   AddDepartment(){
-    let id= localStorage.getItem("id");
+    let id= localStorage.getItem("id_department");
     if (id!= null){
-      this.serviceDepartment.getDepartmentId(+id).subscribe(data=>{
+      this.serviceDepartment.getDepartmentId(id).subscribe(data=>{
         this.deparEmployee.department=data;
       })
     }

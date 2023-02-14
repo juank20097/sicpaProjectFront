@@ -19,7 +19,7 @@ export class EnterpriseService {
     return this.http.post<Enterprise>(this.Url,enterprise);
   }
 
-  getEnterpriseId(id:number){
+  getEnterpriseId(id:string){
     return this.http.get<Enterprise>(this.Url+"/"+id);
   }
 

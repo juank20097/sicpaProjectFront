@@ -33,12 +33,14 @@ export class EmployeelistComponent implements OnInit {
   }
 
   AddDepartmentsEmployee(employe:Employee):void{
-    localStorage.setItem("id",employe.id.toString());
+    console.log("id_employee:" + employe.id.toString())
+    localStorage.setItem("id_employee",employe.id.toString());
     this.router.navigate(["add_depar_employee"]);
   }
 
   View(employe:Employee):void{
-    localStorage.setItem("id",employe.id.toString());
+    console.log(employe.id.toString())
+    localStorage.setItem("id_employee",employe.id.toString());
     this.router.navigate(["list_depar_employee_emplo"]);
   }
 

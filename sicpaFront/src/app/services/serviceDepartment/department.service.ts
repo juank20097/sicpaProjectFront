@@ -29,7 +29,7 @@ export class DepartmentService {
     return this.http.post<Department>(this.Url,department);
   }
 
-  getDepartmentId(id:number){
+  getDepartmentId(id:string){
     return this.http.get<Department>(this.Url+"/"+id);
   }
 

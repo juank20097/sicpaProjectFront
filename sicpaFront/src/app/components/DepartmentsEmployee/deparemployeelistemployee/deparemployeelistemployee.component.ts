@@ -14,9 +14,9 @@ export class DeparemployeelistemployeeComponent implements OnInit {
   constructor(private service:DepartmentsEmployeeService, private router:Router) { }
 
   ngOnInit(): void {
-    let id= localStorage.getItem("id");
+    let id= localStorage.getItem("id_employee");
     if (id!= null){
-      this.service.getDepartmentEmployeeByEmployee(+id).subscribe(data=>{
+      this.service.getDepartmentEmployeeByEmployee(id).subscribe(data=>{
         this.deparEmployees=data;
         console.log(this.deparEmployees);
       })

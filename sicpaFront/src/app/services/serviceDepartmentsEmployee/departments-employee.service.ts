@@ -31,7 +31,7 @@ export class DepartmentsEmployeeService {
     );
   }
 
-  getDepartmentEmployeeId(id:number): Observable<any>{
+  getDepartmentEmployeeId(id:string): Observable<any>{
     return this.http.get<DepartmentsEmployee>(this.Url+"/"+id);
   }
 
@@ -39,11 +39,11 @@ export class DepartmentsEmployeeService {
     return this.http.put<DepartmentsEmployee>(this.Url+"/"+department.id,department);
   }
 
-  getDepartmentEmployeeByDepartment(id:Number): Observable<any>{
+  getDepartmentEmployeeByDepartment(id:string): Observable<any>{
     return this.http.get<DepartmentsEmployee>(this.Url+"/department/"+id);
   }
 
-  getDepartmentEmployeeByEmployee(id:Number): Observable<any>{
+  getDepartmentEmployeeByEmployee(id:string): Observable<any>{
     return this.http.get<DepartmentsEmployee>(this.Url+"/employee/"+id);
   }
 }

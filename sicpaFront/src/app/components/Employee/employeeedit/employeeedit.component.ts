@@ -21,7 +21,7 @@ export class EmployeeeditComponent implements OnInit {
   Edit(){
     let id= localStorage.getItem("id");
     if (id!= null){
-      this.service.getEmployeeId(+id).subscribe(data=>{
+      this.service.getEmployeeId(id).subscribe(data=>{
         this.employee=data;
       })
     }
